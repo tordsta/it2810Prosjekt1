@@ -1,0 +1,40 @@
+.body{ /*this does not work yeat*/
+  background-color: gray;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    ". main ."
+    ". header ."
+    ". main ."
+  ;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.tittle{
+  grid-area: header;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.picture{
+  grid-area: main;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.description{
+  grid-area: main;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+svg{ /*relocates the svg to the middle. should not be nessesary*/
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
