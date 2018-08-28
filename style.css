@@ -1,4 +1,4 @@
-body{ /*this does not work yeat*/
+body{ 
   display: grid;
   background-color: gray;
   grid-template-columns: 1fr 2fr 1fr;
@@ -6,31 +6,35 @@ body{ /*this does not work yeat*/
     ". header ."
     ". main ."
     ". des ."
+    ". doc ."
   ;
   flex-direction: column;
 }
 
-.tittle{
-  grid-area: header;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-}
-
-.picture{
-  grid-area: main;
+.tittle,
+.picture,
+.description,
+.documentation
+{
   display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
 }
 
+.tittle {
+  grid-area: header;
+}
+.picture{
+  grid-area: main;
+}
 .description{
   grid-area: des;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
 }
+.documentation{
+  grid-area: doc;
+}
+
 
 .changeColor{
   fill: pink;
