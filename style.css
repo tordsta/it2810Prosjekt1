@@ -1,13 +1,13 @@
-.body{ /*this does not work yeat*/
+body{ /*this does not work yeat*/
+  display: grid;
   background-color: gray;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas:
-    ". main ."
     ". header ."
     ". main ."
+    ". des ."
   ;
-  justify-content: stretch;
-  align-items: stretch;
+  flex-direction: column;
 }
 
 .tittle{
@@ -21,20 +21,43 @@
   grid-area: main;
   display: flex;
   text-align: center;
+  align-items: center;
   flex-direction: column;
 }
 
 .description{
-  grid-area: main;
+  grid-area: des;
   display: flex;
   text-align: center;
   flex-direction: column;
 }
 
-svg{ /*relocates the svg to the middle. should not be nessesary*/
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+.changeColor{
+  fill: pink;
+}
+
+.changeColor:hover{
+  fill: red;
+}
+
+.changeSize{
+  animation-name: enhance;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin:15.887px 29.88px;
+  animation-play-state: paused;
+}
+
+.changeSize:hover{
+  animation-play-state: running;
+}
+
+@keyframes enhance {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(5);
+  }
 }
