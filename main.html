@@ -16,9 +16,9 @@
       <rect width="400" height="100" style="fill:blue;" />
       <rect width="100" height="100" style="fill:white;" transform='translate(200 200) rotate(45)' />
       <rect width="100" height="100" style="fill:white;stroke-width:10;stroke:rgb(0,0,0)" transform='translate(300 300) rotate(0)' />
-      <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="green" transform='translate(100)' />
-      <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" transform='translate(200)' />
-      <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" transform='translate(300)' />
+      <circle cx="50" cy="50" r="40" fill="green" transform='translate(100)' />
+      <circle cx="50" cy="50" r="40" fill="yellow" transform='translate(200)' />
+      <circle cx="50" cy="50" r="40" stroke="pink" stroke-width="10" fill="red" transform='translate(300)' />
       <polygon class='changeSize' points="100,10 40,198 190,78 10,78 160,198"/>
       <polygon class="changeColor" points="100,10 40,198 190,78 10,78 160,198" transform='translate(100 150) rotate(45)'/>
       <polygon points="100,10 40,198 190,78 10,78 160,198" transform='translate(350) rotate(45)'/>
@@ -26,16 +26,41 @@
   </div>
   <div class="description">
     <p>
-      This picture is made by Elon Newton. It's a work of art better than anything seen before.
+      "Black Star" by Elon Newton. This artwork is an exprecion for the mysterious future of mankinds exploration into the eternal void. It's valued at 1 space rocket, 400 eletric cars and 6 not-a-flamethrowers.     
     </p>
   </div>
   <div class='documentation'>
     <button class='toggle'> Documentation </button>
     <div class='docText'>
-      <p>hello world</p>
+      <p>CSS-grid og flexbox-layout. <br>
+      CSS-grid is used in this projct. The grid-area property is used to generate a 3 by 4 grid. HTML elements are selected by class and assosiated with a grid area and placed in that grid area.
+      Flexbox is used within the grid areas to style the layout of the grid area. Here it is used to center the items. If there are multiple items in one grid area the flex-direction: column; is used to flex them after each other.
+      </p>
+      <p> SVG <br>
+      Canvas is "surface" where you can manipulate picsels with a javascript interface.
+      SVG stands for scalable vector graphics and is based on a XML file structure.
+      In this project SVG is most suitet for the task i needed to solve. One of the main reason i clame this is becuse the artworks simplicity, one does only require simple interactions which can be handels by CSS.
+      SVG has a simple dom sturcture of html, so there is no need for javascript to make it interactive, contarary to Canvas. One can simply have a on hover on a element to make it an interaction.
+      There is only a few SVG elements so there will be problem with overloading the dom. In cases where complex graphics is needed, with many layers to be drawn, Canvas may be a better choice to reduce the load on the dom
+      (thousans of SVG elemets is not ideal). Also in cases where complex interacion we would have to resort to javascript, and in that case the advantage of SVG decreses. Since javascript can be used with SVG and have to be used with Canvas.
+      The last big advantage of SVG over canvas is it's scalability, SVG will not lose it's resolution when scaled. In the case of artworks which one might want to enlarge for displays this is a neet feature.</p>
+      <p> Jquary <br>
+      Jquary is a javascript libary which makes interacion with DOM elements simpler and more elegant. It's been around for a long time and is widely used.
+      For this project we needed jquary for the button functionality, to make the documentation toggle between hidden and shown. The picture inteaction can also be done by jquary, the functionality provided by js/jquary infinitely greater than what CSS provides.
+      </p>
+      <p>Cross-browser testing<br>
+      Cross-browser testing is important to make sure the webpage works in the intended way on all browsers. This is nessesary because of the natrue of the web and browsers. It's the same file that's sent to the different
+      browsers, but it's interpeded uniquely by each browser. This means that different browsers can end up making different decisions about the same code. Testing in multiple browsers allows us to correct these mistakes.
+      This webpage has been tested in chrome and in firefox and worked as expected. The biggest concert with this project is the animation part, which require different webkits for different browsers.</p>
+      <p> Information Sources<br>
+      My main information sources comes form the web. Some of the sites i used infromation from is:<br>
+      www.w3schools.com, www.sitepoint.com, css-tricks.com, stackoverflow.com, medium.com</p>
+      <p>Reuse of code<br>
+      The code for the button functionality is based on: <a href="https://www.w3schools.com/jquery/jquery_hide_show.asp">w3schools</a><br>
+      The code for the SVG animation is based on: <a href="https://stackoverflow.com/questions/35124550/animating-an-svg-on-hover">stackoverflow</a>
+      </p>
+      <p>PS. Feedback can be given in Norwegian. I just prefer writing documentation in english.</p>
     </div>
-
-
   </div>
 </body>
 </html>
